@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import AstronautRow from "./AstronautRow";
-import selectedAstronaut from "./SelectedAstronaut";
 
-function AstronautList({setSelectedAstronautId}) {
-    const [astronauts, setAstronauts] = useState([])
+
+function AstronautList({ setSelectedAstronautId, astronauts, setAstronauts }) {
+   
 
     useEffect(() => {
         async function fetchAstronauts() {
@@ -13,7 +13,7 @@ function AstronautList({setSelectedAstronautId}) {
                     'https://ll.thespacedevs.com/2.3.0/astronauts/')
                 const result = await response.json();
                 setAstronauts(result.results);
-                console.log(result)
+                console.log(result.results)
 
             } catch (error) {
                 console.error(error);
@@ -23,18 +23,14 @@ function AstronautList({setSelectedAstronautId}) {
     }, [])
     return (
         <>
-        {astronauts && (
-            astronauts.map((astronaut) => (
-              <div>
-
-                <AstronautRow key={astronaut.id} astronaut={astronaut} setSelectedAstronautId={setSelectedAstronautId}
-                />
+<div>
+                {astronauts && (
+                    astronauts.map((astronaut) => (
+                        <AstronautRow key={astronaut.id} astronaut={astronaut} setSelectedAstronautId={setSelectedAstronautId}
+                        />
+                    )))}
                 </div>
-            ))
-        ) 
-     
-      }
-      </>
+        </>
     );
 }
 export default AstronautList

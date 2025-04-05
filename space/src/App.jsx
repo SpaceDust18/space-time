@@ -1,17 +1,17 @@
 import { useState } from 'react'
 import './App.css'
 import AstronautList from './components/AstronautList'
-import selectedAstronaut from './components/SelectedAstronaut'
+import SelectedAstronaut from './components/SelectedAstronaut'
 
 function App() {
- const [selectedAstronautId, setSelectedAstronautId] = useState("")
-
+  const [selectedAstronautId, setSelectedAstronautId] = useState("")
+  const [astronauts, setAstronauts] = useState([])
   return (
     <div>
       {selectedAstronautId ? (
-        <SelectedAstronaut selectedAstronautId={selectedAstronautId} setSelectedAstronautId={setSelectedAstronautId}/>
+        <SelectedAstronaut selectedAstronautId={selectedAstronautId} setSelectedAstronautId={setSelectedAstronautId} />
       ) : (
-     <AstronautList setSelectedAstronautId={setSelectedAstronautId}/> 
+        <AstronautList setSelectedAstronautId={setSelectedAstronautId} astronauts={astronauts} setAstronauts={setAstronauts} />
       )}
     </div>
   )

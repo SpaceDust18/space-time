@@ -7,13 +7,16 @@ function AstronautRow({ setSelectedAstronautId, astronaut }) {
                 setSelectedAstronautId(astronaut.id);
             }}
         >
-            <p>{astronaut.name}</p>
-            <p>{astronaut.bio}</p>
-            <p>{astronaut.first_flight}</p>
-
+            <div><strong>Name:</strong>{astronaut.name}</div>
+            <br />
+            <div><strong>Bio:</strong>{astronaut.bio}</div>
+            <br />
+            <div><strong>First Flight:</strong>{astronaut.first_flight}</div>
+            <br />
+           
         </div>
     )
 
 }
 
-export default AstronautRow
+export default AstronautRow 
