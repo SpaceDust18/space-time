@@ -36,21 +36,34 @@ function SelectedAstronaut({ selectedAstronautId, setSelectedAstronautId }) {
           alt={`${astronaut.name}'s image`}
           className="astronaut-image" />
       )}
-      <div>
-        <h2>{astronaut.name}</h2>
-        <div className="detail-item">
-          <strong>Bio:</strong>
-          <p>{astronaut.bio}</p>
+      <div className="astronaut-details">
+        <div >
+          <h2>{astronaut.name}</h2>
         </div>
-        <p><strong>Age:</strong> {astronaut.age}</p>
-        <p><strong>Flights Count:</strong> {astronaut.flights_count}</p>
-        <p><strong>Last Flight:</strong> {astronaut.last_flight}</p>
-        <p><strong>Space-walk Count:</strong> {astronaut.spacewalks_count}</p>
-        <p><strong>Status:</strong> {astronaut.status?.name}</p>
-        <p><strong>Time in Space:</strong> {astronaut.time_in_space}</p>
-
-        <button className="back-button" onClick={() => setSelectedAstronautId(null)}>Back to Astronauts</button>
-
+        <div>
+          <p><strong>Bio:</strong>{astronaut.bio}</p>
+        </div>
+        <div>
+          <p><strong>Age:</strong> {astronaut.age}</p>
+        </div>
+        <div>
+          <p><strong>Flights Count:</strong> {astronaut.flights_count}</p>
+        </div>
+        <div>
+          <p><strong>Last Flight:</strong> {astronaut.last_flight}</p>
+        </div>
+        <div>
+          <p><strong>Space-walk Count:</strong> {astronaut.spacewalks_count}</p>
+        </div>
+        <div>
+          <p><strong>Status:</strong> {astronaut.status?.name}</p>
+        </div>
+        <div>
+          <p><strong>Time in Space:</strong> {astronaut.time_in_space}</p>
+        </div>
+        <div>
+          <button className="back-button" onClick={() => setSelectedAstronautId(null)}>Back to Astronauts</button>
+        </div>
       </div>
     </div>
   );

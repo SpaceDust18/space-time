@@ -20,9 +20,8 @@ function AstronautRow({ setSelectedAstronautId, astronaut }) {
             )}
 
             <div className="astronaut-details">
-                <div className="Astronaut-name">
-                    <strong><p>{astronaut.name}</p></strong>
-                    
+                <div >
+                    <p className="astronaut-name">{astronaut.name}</p>
                 </div>
                 <div className="detail-item">
                     <strong>Agency:</strong>
@@ -36,9 +35,9 @@ function AstronautRow({ setSelectedAstronautId, astronaut }) {
                     <strong>First Flight:</strong>
                     <p>{astronaut.first_flight}</p>
                 </div>
-                
+
                 <div>
-                <button className="more-info" onClick={() => setSelectedAstronautId(null)}>More Details</button>
+                    <button className="more-info" onClick={() => setSelectedAstronautId(null)}>More Details</button>
                 </div>
             </div>
         </div>
