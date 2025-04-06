@@ -1,10 +1,12 @@
+//RESPONSIBLE FOR DISPLAYING THE LIST OF ASTRONAUTS
+
 import React, { useState } from "react";
 import { useEffect } from "react";
 import AstronautRow from "./AstronautRow";
 
 
 function AstronautList({ setSelectedAstronautId, astronauts, setAstronauts }) {
-   
+
 
     useEffect(() => {
         async function fetchAstronauts() {
@@ -23,13 +25,16 @@ function AstronautList({ setSelectedAstronautId, astronauts, setAstronauts }) {
     }, [])
     return (
         <>
-<div>
-                {astronauts && (
+            <div className="astronaut-list">
+                {astronauts &&
                     astronauts.map((astronaut) => (
-                        <AstronautRow key={astronaut.id} astronaut={astronaut} setSelectedAstronautId={setSelectedAstronautId}
+                        <AstronautRow
+                            key={astronaut.id}
+                            astronaut={astronaut}
+                            setSelectedAstronautId={setSelectedAstronautId}
                         />
-                    )))}
-                </div>
+                    ))}
+            </div>
         </>
     );
 }

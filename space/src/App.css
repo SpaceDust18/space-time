@@ -27,16 +27,34 @@
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   padding: 2em;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+@media (max-width: 900px) {
+  .event-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+}
+.back-button {
+  color: aliceblue;
+}
+
+.nav-bar {
+  color: aliceblue;
+}
+
+.content {
+  font-size: 20px;
+  background-color:rgba(0, 0, 0, 0.7);
 }
