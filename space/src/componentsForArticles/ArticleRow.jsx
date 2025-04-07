@@ -47,7 +47,7 @@ function ArticleRow({ setSelectedArticleId, article }) {
                                 {article.news_site}
                             </a>
                         ) : (
-                            // If it's not a valid URL, just display the name as plain text
+                            // If it's not a valid URL, displays the name as plain text
                             <span>{article.news_site || "No URL available"}</span>
                         )}
                     </p>
