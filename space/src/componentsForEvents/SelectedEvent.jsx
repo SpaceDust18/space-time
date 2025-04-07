@@ -1,9 +1,7 @@
-//SHOWS DETAIL INFORMATION FOR A SELECTED EVENT
+import React, { useState, useEffect } from "react";
 
-import React, { useState, useEffect } from "react"
-
-function SelectedEvent({ selectedEventId, setSelectedEventId }) {
-  const [event, setEvent] = useState()
+function SelectedEvent({ selectedEventId, setSelectedEventId, setView }) {
+  const [event, setEvent] = useState();
 
   useEffect(() => {
     async function fetchEvent() {
@@ -13,7 +11,7 @@ function SelectedEvent({ selectedEventId, setSelectedEventId }) {
         );
         const result = await response.json();
         setEvent(result);
-        console.log(result)
+        console.log(result);
       } catch (error) {
         console.error("Error fetching event:", error);
       }
@@ -23,32 +21,35 @@ function SelectedEvent({ selectedEventId, setSelectedEventId }) {
   }, [selectedEventId]);
 
   if (!event || !event.name) {
-    return <p>Loading event details...</p>;
+    return <p className="loading-message">Loading event details...</p>;
   }
 
+  const handleBack = () => {
+    setSelectedEventId(null);  // Resets the selected event
+    setView("events");  // Sets the view back to the event list
+  };
+
   return (
-
-
     <div className="selected-event">
-      {event.image.image_url && (
+      {event.image && event.image.image_url && (
         <img
           src={event.image.image_url}
           alt={`${event.name}'s image`}
-          className="event-image" />
+          className="event-image"
+        />
       )}
-      <div>
+      <div className="event-details">
         <h2>{event.name}</h2>
-        <div className="event-details">
+        <div className="event-description">
           <strong>Description:</strong>
           <p>{event.description}</p>
         </div>
         <p><strong>Event Name:</strong> {event.name}</p>
-
-        <button className="back-button" onClick={() => setSelectedEventId(null)}>Back to Events</button>
-
+        {/* Add other event details if needed */}
+        <button className="back-button" onClick={handleBack}>Back to Events</button>
       </div>
     </div>
   );
 }
 
-export default SelectedEvent
+export default SelectedEvent;

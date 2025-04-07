@@ -175,7 +175,6 @@ p {
   border: 3px solid darkorange;
 }
 
-/* Selected event card */
 .selected-event {
   background-color: rgba(0, 0, 0, 0.75);
   color: white;
@@ -246,9 +245,21 @@ button {
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.3s ease;
+
 }
 
 button:hover {
   background: darkorange;
   color: black;
+}
+.more-info {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px; 
+}
+
+.loading-message {
+  color: black;
+  font-size: 50px;
+  font-weight: bold;
 }

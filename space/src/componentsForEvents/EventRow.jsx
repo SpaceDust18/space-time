@@ -20,17 +20,13 @@ function EventRow({ setSelectedEventId, event }) {
             )}
 
             <div className="event-details">
-                <div className="Event-name">
+                <div>
                     <strong><p>{event.name}</p></strong>
-                    
-                </div>
-                <div className="event-description">
-                    <strong>Description:</strong>
-                    <p>{event.description}</p>
+                    <strong>Description:</strong><p>{event.description}</p>                   
                 </div>
                 
-                <div>
-                <button className="more-info" onClick={() => setSelectedEventId(null)}>More Details</button>
+                <div className="more-info">
+                <button  onClick={() => setSelectedEventId(null)}>More Details</button>
                 </div>
             </div>
         </div>
