@@ -1,4 +1,4 @@
-//RESPONSIBLE FOR DISPLAYING THE LIST OF ASTRONAUTS
+//RESPONSIBLE FOR DISPLAYING THE LIST OF EVENTS
 
 import React, { useState } from "react";
 import { useEffect } from "react";
