@@ -18,7 +18,7 @@ function AstronautRow({ setSelectedAstronautId, astronaut }) {
                     className="astronaut-image"
                 />
             )}
-
+<div className="astronaut-background"></div>
             <div className="astronaut-details">
                 <div >
                     <p className="astronaut-name">{astronaut.name}</p>

@@ -4,8 +4,8 @@
   padding: 32px;
   text-align: center;
 }
-/* Sun background (fixed background image) */
-.sun-background {
+
+
   position: fixed;
   top: 0;
   left: 0;
@@ -15,7 +15,6 @@
   background-size: cover;
   background-attachment: fixed;
   z-index: -1;
-}
 
 /* Main content styles */
 .content {
@@ -262,4 +261,17 @@ button:hover {
   color: black;
   font-size: 50px;
   font-weight: bold;
+}
+
+.astronaut-name {
+  color: white; 
+  text-align: center;
+  font-weight: bold;
+}
+.back-button {
+  color: black;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }

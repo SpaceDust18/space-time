@@ -45,8 +45,11 @@ function SelectedEvent({ selectedEventId, setSelectedEventId, setView }) {
           <p>{event.description}</p>
         </div>
         <p><strong>Event Name:</strong> {event.name}</p>
-        {/* Add other event details */}
-        <button className="back-button" onClick={handleBack}>Back to Events</button>
+        {/* Add other event details if needed */}
+        <div className="back-button">
+          <button  onClick={handleBack}>Back to Events</button>
+        </div>
+        
       </div>
     </div>
   );

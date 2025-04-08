@@ -39,7 +39,7 @@ function SelectedAstronaut({ selectedAstronautId, setSelectedAstronautId, setVie
         />
       )}
       <div className="astronaut-details">
-        <h2>{astronaut.name}</h2>
+        <h2 className="astronaut-name">{astronaut.name}</h2>
         <p><strong>Bio:</strong>{astronaut.bio}</p>
         <p><strong>Age:</strong> {astronaut.age}</p>
         <p><strong>Flights Count:</strong> {astronaut.flights_count}</p>
@@ -47,7 +47,10 @@ function SelectedAstronaut({ selectedAstronautId, setSelectedAstronautId, setVie
         <p><strong>Space-walk Count:</strong> {astronaut.spacewalks_count}</p>
         <p><strong>Status:</strong> {astronaut.status?.name}</p>
         <p><strong>Time in Space:</strong> {astronaut.time_in_space}</p>
-        <button className="back-button" onClick={handleBack}>Back to Astronauts</button>
+        <div className="back-button">
+           <button  onClick={handleBack}>Back to Astronauts</button>
+        </div>
+       
       </div>
     </div>
   );

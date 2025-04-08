@@ -20,8 +20,8 @@ function App() {
   //set divs for diff backgrounds
   return (
     <div className="app-wrapper">
-      <div className="sun-background"></div>
-
+      
+      <div className="event-background"></div>
       <div className="content">
         <h1>Welcome to SpaceBound!</h1>
       </div>
@@ -45,12 +45,12 @@ function App() {
           </button>
 
           <button onClick={() => {
-           
+
             if (view !== "events") {
-              setSelectedEventId("");  
-              setView("events");  
+              setSelectedEventId("");
+              setView("events");
             } else {
-             
+
               setSelectedEventId("");
               setView("events");
             }
@@ -59,11 +59,11 @@ function App() {
           </button>
 
           <button onClick={() => {
-           
+
             if (view !== "articles") {
-              setView("articles"); 
+              setView("articles");
             } else {
-             
+
               setView("articles");
             }
           }}>
